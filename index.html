@@ -89,10 +89,28 @@
       <h2>Contacto</h2>
       <p>¿Listo para automatizar tu agencia?</p>
       <form>
-        <label>Nombre:<br /><input type="text" name="nombre" required /></label><br /><br />
-        <label>Email:<br /><input type="email" name="email" required /></label><br /><br />
-        <label>Mensaje:<br /><textarea name="mensaje" required></textarea></label><br /><br />
-        <button type="submit">Enviar</button>
+        <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulario de Contacto</title>
+</head>
+<body>
+
+  <h1>Contáctanos</h1>
+
+  <form name="contact" method="POST" data-netlify="true">
+    <!-- Campo oculto para tu correo (opcional, solo informativo) -->
+    <input type="hidden" name="to" value="automatizatuempresa@conversiaagency.es" />
+
+    <input type="email" name="email" placeholder="Tu correo" required />
+    <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <p>Te responderemos lo antes posible.</p>
+
+</body>
       </form>
     </section>
   </main>
