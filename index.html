@@ -8,98 +8,137 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f7f9fc;
+      background: #f9f9f9;
       color: #333;
-      text-align: center;
     }
+
     header {
-      background: linear-gradient(to right, #182848, #4b6cb7);
+      background: linear-gradient(135deg, #0056d6, #00a3ff);
       color: white;
-      padding: 20px;
+      text-align: center;
+      padding: 60px 20px;
     }
-    nav a {
-      color: white;
-      margin: 0 15px;
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0 0 15px 0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin: 0 0 25px 0;
+    }
+
+    header a {
+      background: #fff;
+      color: #0056d6;
+      padding: 12px 25px;
+      border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
     }
-    main {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
+
     section {
-      margin-bottom: 60px;
-    }
-    footer {
-      background: #182848;
-      color: white;
-      text-align: center;
+      max-width: 1100px;
+      margin: 50px auto;
       padding: 20px;
     }
-    .button {
-      background: #4b6cb7;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
+
+    h2 {
+      color: #0056d6;
+      margin-bottom: 20px;
     }
-    /* Estilo para el logo en header */
-    header img {
-      height: 150px;
-      vertical-align: middle;
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .cta {
+      text-align: center;
+      margin: 60px 0;
+    }
+
+    .cta a {
+      background: #0056d6;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 6px;
+      font-size: 1.2em;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 25px 10px;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
+
+  <!-- ENCABEZADO -->
   <header>
-    <img src="images/logo-conversia.png" alt="Conversia Agency" />
-    <nav>
-      <a href="#features">Características</a>
-      <a href="#pricing">Precios</a>
-      <a href="#contact">Contacto</a>
-    </nav>
+    <h1>Automatiza tu clínica con chatbots</h1>
+    <p>Más pacientes, menos trabajo. Chatbots 24/7 que agendan, responden y recuerdan por ti.</p>
+    <a href="mailto:automatizatuempresa@conversiaagency.es">Contáctanos hoy</a>
   </header>
 
-  <main>
-    <section>
-      <h1>Automatiza tu Agencia con Chatbots Inteligentes</h1>
-      <p>Convierte visitantes en clientes potenciales 24/7 con nuestra solución de chatbots personalizada para tu negocio.</p>
-      <a href="#contact" class="button">Solicita tu Demo</a>
-    </section>
+  <!-- SERVICIOS -->
+  <section>
+    <h2>¿Qué podemos hacer por ti?</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Agendamiento automático</h3>
+        <p>Agenda citas 24/7 sin llamadas perdidas.</p>
+      </div>
+      <div class="card">
+        <h3>Respuestas instantáneas</h3>
+        <p>Chatbots que atienden a tus pacientes al momento.</p>
+      </div>
+      <div class="card">
+        <h3>Recordatorios automáticos</h3>
+        <p>Evita ausencias y mejora la asistencia de tus clientes.</p>
+      </div>
+      <div class="card">
+        <h3>Captación de leads</h3>
+        <p>Convierte visitantes en pacientes reales.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="features">
-      <h2>Características Principales</h2>
-      <ul>
-        <li>Respuestas automáticas 24/7</li>
-        <li>Fácil integración con tu web y redes sociales</li>
-        <li>Personalización según tu negocio</li>
-        <li>Recopilación de datos y generación de leads</li>
-      </ul>
-    </section>
+  <!-- POR QUÉ ELEGIRNOS -->
+  <section>
+    <h2>¿Por qué elegir Conversia?</h2>
+    <ul>
+      <li>Tecnología accesible y personalizable</li>
+      <li>Soporte dedicado 100% en español</li>
+      <li>Integración con tu CRM o calendario</li>
+      <li>Resultados rápidos y visibles</li>
+    </ul>
+  </section>
 
-    <section id="pricing">
-      <h2>Planes y Precios</h2>
-      <p>Adaptados a las necesidades de tu agencia. Desde planes básicos hasta soluciones avanzadas.</p>
-      <ul>
-        <li>Plan Básico: Soporte para 1 chatbot</li>
-        <li>Plan Pro: Hasta 5 chatbots y reportes avanzados</li>
-        <li>Plan Premium: Chatbots ilimitados y soporte personalizado</li>
-      </ul>
-    </section>
+  <!-- CTA -->
+  <div class="cta">
+    <h2>¿Quieres ahorrar tiempo y ganar más clientes?</h2>
+    <a href="mailto:automatizatuempresa@conversiaagency.es">Escríbenos ahora</a>
+  </div>
 
-    <section id="contact">
-      <h2>Contacto</h2>
-      <p>¿Listo para automatizar tu agencia?</p>
-      <!-- Aquí incrustamos el formulario de Google Forms correctamente -->
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScE5_sHr7d4GR3ZGkWi_BFbYwxr7x4OsTJNQ3HvPCcVfqmlEg/viewform?embedded=true" width="640" height="1239" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-      <p>Te responderemos lo antes posible.</p>
-    </section>
-  </main>
-
+  <!-- FOOTER -->
   <footer>
-    <p>© 2025 Conversia Agency | Contacto: automatizatuagencia@conversiaagency.es</p>
+    <p>Conversia Agency © 2025 · Automatización para negocios</p>
+    <p>📧 automatizatuempresa@conversiaagency.es</p>
   </footer>
+
 </body>
 </html>
-
