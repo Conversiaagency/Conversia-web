@@ -17,16 +17,32 @@
       color: white;
       text-align: center;
       padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* Logo con fondo blanco para que destaque sobre azul */
+    .header-logo {
+      background: white;
+      padding: 10px;
+      border-radius: 12px;
+      display: inline-block;
+    }
+
+    .header-logo img {
+      height: 70px;
     }
 
     header h1 {
       font-size: 2.5em;
-      margin: 0 0 15px 0;
+      margin: 0;
     }
 
     header p {
       font-size: 1.2em;
-      margin: 0 0 25px 0;
+      margin: 0 0 15px 0;
     }
 
     header a {
@@ -111,6 +127,10 @@
       margin-bottom: 15px;
     }
 
+    .caso-exito p {
+      font-style: italic;
+    }
+
     /* Agendar llamada */
     .agenda-llamada {
       background: #f1f7ff;
@@ -176,6 +196,9 @@
 
   <!-- ENCABEZADO -->
   <header>
+    <div class="header-logo">
+      <img src="imágenes/logo-conversia.png" alt="Conversia Agency">
+    </div>
     <h1>Automatiza tu negocio con chatbots</h1>
     <p>Más clientes, menos trabajo. Chatbots 24/7 que agendan, responden y recuerdan por ti.</p>
     <a href="mailto:automatizatuempresa@conversiaagency.es">Contáctanos hoy</a>
@@ -259,6 +282,7 @@
   <section class="caso-exito">
     <h3>Caso de éxito: Clínica Saludable</h3>
     <p>Implementamos un chatbot que permitió a la clínica gestionar reservas y responder preguntas frecuentes de más de 500 pacientes al mes, reduciendo un 70% el tiempo dedicado a llamadas y correos. Gracias a la automatización, el personal pudo centrarse en tareas más importantes y los pacientes recibieron atención inmediata, aumentando la satisfacción y fidelización de manera notable.</p>
+    <p><strong>Dra. Laura Martínez, Directora de la Clínica Saludable:</strong> "Desde que implementamos el chatbot de Conversia Agency, la eficiencia de nuestro equipo ha mejorado increíblemente y los pacientes están mucho más satisfechos con la rapidez de atención. Realmente superó nuestras expectativas."</p>
   </section>
 
   <!-- AGENDAR LLAMADA CON CALENDLY -->
@@ -284,4 +308,3 @@
 
 </body>
 </html>
-
