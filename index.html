@@ -84,21 +84,100 @@
       margin-top: 50px;
     }
 
-    ul {
-      padding-left: 20px;
+    /* Botón flotante WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
     }
 
-    ul li {
-      margin-bottom: 8px;
+    .whatsapp-float img {
+      width: 60px;
+      height: 60px;
+    }
+
+    /* Caso de éxito */
+    .caso-exito {
+      background: #e8f0fe;
+      padding: 30px;
+      border-radius: 10px;
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .caso-exito h3 {
+      color: #0056d6;
+      margin-bottom: 15px;
+    }
+
+    /* Agendar llamada */
+    .agenda-llamada {
+      background: #f1f7ff;
+      padding: 50px 20px;
+      text-align: center;
+      border-radius: 10px;
+      margin: 40px 0;
+    }
+
+    .agenda-llamada h2 {
+      color: #0056d6;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .agenda-llamada p {
+      color: #333;
+      font-size: 1.1em;
+      margin-bottom: 30px;
+    }
+
+    .agenda-llamada a {
+      background: #25D366;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    /* Tabla de planes */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background: #0056d6;
+      color: white;
+    }
+
+    td.cross {
+      color: red;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://api.whatsapp.com/send?phone=685508883&text=%20" target="_blank" class="whatsapp-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </a>
+
   <!-- ENCABEZADO -->
   <header>
     <h1>Automatiza tu negocio con chatbots</h1>
-    <p>Más pacientes, menos trabajo. Chatbots 24/7 que agendan, responden y recuerdan por ti.</p>
+    <p>Más clientes, menos trabajo. Chatbots 24/7 que agendan, responden y recuerdan por ti.</p>
     <a href="mailto:automatizatuempresa@conversiaagency.es">Contáctanos hoy</a>
   </header>
 
@@ -108,53 +187,87 @@
     <div class="grid">
       <div class="card">
         <h3>Agendamiento automático</h3>
-        <p>Agenda citas 24/7 sin llamadas perdidas.</p>
+        <p>Los clientes pueden reservar citas directamente sin llamadas ni mensajes adicionales.</p>
       </div>
       <div class="card">
         <h3>Respuestas instantáneas</h3>
-        <p>Chatbots que atienden a tus pacientes al momento.</p>
+        <p>El chatbot responde automáticamente a preguntas frecuentes para que no pierdas clientes.</p>
       </div>
       <div class="card">
         <h3>Recordatorios automáticos</h3>
-        <p>Evita ausencias y mejora la asistencia de tus clientes.</p>
+        <p>Envía recordatorios de citas y eventos para evitar ausencias o olvidos.</p>
       </div>
       <div class="card">
         <h3>Captación de leads</h3>
-        <p>Convierte visitantes en pacientes reales.</p>
+        <p>Convierte visitantes en clientes reales gracias a respuestas rápidas y efectivas.</p>
       </div>
     </div>
   </section>
 
-  <!-- CASO DE ÉXITO -->
+  <!-- TABLA COMPARATIVA DE PLANES -->
   <section>
-    <h2>Caso de Éxito</h2>
-    <div class="card">
-      <h3>Clínica Dental Sonrisa Perfecta</h3>
-      <p>
-        Antes de implementar nuestro chatbot, la clínica recibía muchas llamadas perdidas
-        y los pacientes olvidaban sus citas con frecuencia. 
-        Después de integrar nuestro sistema de agendamiento automático y recordatorios 24/7:
-      </p>
-      <ul>
-        <li>Redujeron un 40% las llamadas perdidas.</li>
-        <li>Disminuyeron un 30% las ausencias a citas.</li>
-        <li>Incrementaron un 25% la captación de nuevos pacientes.</li>
-      </ul>
-      <p>
-        “Desde que usamos Conversia Agency, nuestra agenda está siempre llena y los pacientes nos escriben encantados. ¡Ha sido un cambio total para nuestro negocio!” – <strong>Dra. Laura Martínez, Directora</strong>
-      </p>
-    </div>
+    <h2>Planes de Chatbots</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Características</th>
+          <th>Plan Básico - 100€</th>
+          <th>Plan Avanzado - 600€</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Flujos de conversación simples</td>
+          <td>✔️</td>
+          <td>✔️</td>
+        </tr>
+        <tr>
+          <td>Reserva de citas</td>
+          <td>✔️</td>
+          <td>✔️</td>
+        </tr>
+        <tr>
+          <td>Manejo de preguntas frecuentes</td>
+          <td>✔️</td>
+          <td>✔️</td>
+        </tr>
+        <tr>
+          <td>Integración con sistemas del cliente</td>
+          <td class="cross">❌</td>
+          <td>✔️</td>
+        </tr>
+        <tr>
+          <td>Soporte multicanal (WhatsApp, Messenger, web)</td>
+          <td class="cross">❌</td>
+          <td>✔️</td>
+        </tr>
+        <tr>
+          <td>Recordatorios automáticos</td>
+          <td class="cross">❌</td>
+          <td>✔️</td>
+        </tr>
+        <tr>
+          <td>Personalización avanzada</td>
+          <td class="cross">❌</td>
+          <td>✔️</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 
-  <!-- POR QUÉ ELEGIRNOS -->
-  <section>
-    <h2>¿Por qué elegir Conversia?</h2>
-    <ul>
-      <li>Tecnología accesible y personalizable</li>
-      <li>Soporte dedicado 100% en español</li>
-      <li>Integración con tu CRM o calendario</li>
-      <li>Resultados rápidos y visibles</li>
-    </ul>
+  <!-- CASO DE ÉXITO -->
+  <section class="caso-exito">
+    <h3>Caso de éxito: Clínica Saludable</h3>
+    <p>Implementamos un chatbot que permitió a la clínica gestionar reservas y responder preguntas frecuentes de más de 500 pacientes al mes, reduciendo un 70% el tiempo dedicado a llamadas y correos.</p>
+  </section>
+
+  <!-- AGENDAR LLAMADA CON CALENDLY -->
+  <section class="agenda-llamada">
+    <h2>¿Quieres una llamada rápida?</h2>
+    <p>Podemos mostrarte cómo un chatbot puede ayudarte a tu negocio y explicarte nuestros planes en pocos minutos.</p>
+    <a href="https://calendly.com/ivialonsolopez/new-meeting" target="_blank">
+      Agendar llamada
+    </a>
   </section>
 
   <!-- CTA -->
@@ -169,14 +282,6 @@
     <p>📧 automatizatuempresa@conversiaagency.es</p>
   </footer>
 
-  <!-- Botón flotante WhatsApp -->
-  <a href="https://api.whatsapp.com/send?phone=685508883&text=%20" 
-     target="_blank" 
-     style="position:fixed;bottom:20px;right:20px;z-index:9999;">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-         alt="WhatsApp" 
-         style="width:60px;height:60px;">
-  </a>
-
 </body>
 </html>
+
