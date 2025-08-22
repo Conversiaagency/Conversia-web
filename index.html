@@ -86,7 +86,6 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 30px;
-      table-layout: fixed;
     }
 
     table, th, td {
@@ -96,7 +95,7 @@
     th, td {
       padding: 15px;
       text-align: center;
-      transition: transform 0.5s ease, background-color 0.5s ease;
+      transition: transform 0.3s ease;
     }
 
     th {
@@ -105,30 +104,17 @@
     }
 
     .check {
-      color: #28a745; /* verde */
+      color: #28a745;
       font-weight: bold;
       font-size: 1.7em;
+      transition: transform 0.3s ease;
     }
 
     .cross {
       color: red;
       font-weight: bold;
       font-size: 1.7em;
-    }
-
-    /* Resaltar y aumentar columna al pasar ratón (más notable) */
-    .plan-basic:hover td:nth-child(2),
-    .plan-basic:hover th:nth-child(2) {
-      background-color: #c0e0ff;
-      transform: scale(1.3);
-      z-index: 1;
-    }
-
-    .plan-advanced:hover td:nth-child(3),
-    .plan-advanced:hover th:nth-child(3) {
-      background-color: #c0e0ff;
-      transform: scale(1.3);
-      z-index: 1;
+      transition: transform 0.3s ease;
     }
 
     /* Botón flotante WhatsApp */
@@ -178,37 +164,6 @@
       font-size: 1.1em;
       color: #333;
     }
-
-    .select-plan-form {
-      background-color: #e6f2ff;
-      padding: 15px;
-      margin-top: 10px;
-      border-radius: 8px;
-      display: inline-block;
-      text-align: center;
-    }
-
-    .select-plan-form input,
-    .select-plan-form textarea {
-      padding: 8px;
-      margin: 5px 0;
-      width: 90%;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    .select-plan-form button {
-      padding: 10px 20px;
-      background-color: #0077b6;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .select-plan-form button:hover {
-      background-color: #023e8a;
-    }
   </style>
 </head>
 <body>
@@ -238,12 +193,12 @@
         <p>Convierte visitantes de tu web o redes sociales en clientes reales.</p>
       </div>
       <div class="card">
-        <h3>Integración con CRM</h3>
-        <p>Conecta tu chatbot con herramientas de gestión de clientes para mayor eficiencia.</p>
+        <h3>Analítica avanzada</h3>
+        <p>Obtén datos precisos sobre la interacción de tus clientes con el chatbot.</p>
       </div>
       <div class="card">
-        <h3>Soporte multicanal avanzado</h3>
-        <p>Gestiona conversaciones desde WhatsApp, Messenger y Web de forma centralizada.</p>
+        <h3>Integración CRM</h3>
+        <p>Conecta tu chatbot con tu sistema de gestión de clientes para automatizar procesos.</p>
       </div>
     </div>
   </section>
@@ -253,65 +208,65 @@
     <table>
       <tr>
         <th>Características</th>
-        <th class="plan-basic">Plan Básico - 100€</th>
-        <th class="plan-advanced">Plan Avanzado - 600€</th>
+        <th class="plan-col" data-plan="basico">Plan Básico - 100€</th>
+        <th class="plan-col" data-plan="avanzado">Plan Avanzado - 600€</th>
       </tr>
       <tr>
         <td>Atención 24/7 con respuestas rápidas</td>
-        <td class="plan-basic"><span class="check">✅</span></td>
-        <td class="plan-advanced"><span class="check">✅</span></td>
+        <td class="basico"><span class="check">✅</span></td>
+        <td class="avanzado"><span class="check">✅</span></td>
       </tr>
       <tr>
         <td>Preguntas frecuentes automatizadas</td>
-        <td class="plan-basic"><span class="check">✅</span></td>
-        <td class="plan-advanced"><span class="check">✅</span></td>
+        <td class="basico"><span class="check">✅</span></td>
+        <td class="avanzado"><span class="check">✅</span></td>
       </tr>
       <tr>
         <td>Reserva de citas simple</td>
-        <td class="plan-basic"><span class="check">✅</span></td>
-        <td class="plan-advanced"><span class="check">✅</span></td>
+        <td class="basico"><span class="check">✅</span></td>
+        <td class="avanzado"><span class="check">✅</span></td>
       </tr>
       <tr>
         <td>Recordatorios automáticos (evita ausencias u olvidos)</td>
-        <td class="plan-basic"><span class="cross">✘</span></td>
-        <td class="plan-advanced"><span class="check">✅</span></td>
+        <td class="basico"><span class="cross">✘</span></td>
+        <td class="avanzado"><span class="check">✅</span></td>
       </tr>
       <tr>
         <td>Soporte en múltiples canales (WhatsApp, Messenger, Web)</td>
-        <td class="plan-basic"><span class="cross">✘</span></td>
-        <td class="plan-advanced"><span class="check">✅</span></td>
+        <td class="basico"><span class="cross">✘</span></td>
+        <td class="avanzado"><span class="check">✅</span></td>
       </tr>
       <tr>
         <td>Integración con herramientas de gestión de clientes</td>
-        <td class="plan-basic"><span class="cross">✘</span></td>
-        <td class="plan-advanced"><span class="check">✅</span></td>
+        <td class="basico"><span class="cross">✘</span></td>
+        <td class="avanzado"><span class="check">✅</span></td>
       </tr>
       <tr>
         <td>Mayor personalización en flujos de conversación</td>
-        <td class="plan-basic"><span class="cross">✘</span></td>
-        <td class="plan-advanced"><span class="check">✅</span></td>
+        <td class="basico"><span class="cross">✘</span></td>
+        <td class="avanzado"><span class="check">✅</span></td>
       </tr>
     </table>
 
-    <!-- Formularios Seleccionar Plan -->
-    <div style="display: flex; justify-content: space-between; margin-top: 10px;">
-      <div class="select-plan-form" style="width:48%;">
-        <form action="mailto:automatizatuempresa@conversiaagency.es" method="post" enctype="text/plain">
-          <input type="text" name="Nombre" placeholder="Tu nombre" required><br>
-          <input type="email" name="Correo" placeholder="Tu correo" required><br>
-          <input type="text" name="Asunto" value="Deseo información sobre Plan Básico - 100€: Me gustaría recibir más detalles sobre su funcionamiento y beneficios" required><br>
-          <button type="submit">Selecciona este plan</button>
-        </form>
-      </div>
-      <div class="select-plan-form" style="width:48%;">
-        <form action="mailto:automatizatuempresa@conversiaagency.es" method="post" enctype="text/plain">
-          <input type="text" name="Nombre" placeholder="Tu nombre" required><br>
-          <input type="email" name="Correo" placeholder="Tu correo" required><br>
-          <input type="text" name="Asunto" value="Deseo información sobre Plan Avanzado - 600€: Me gustaría recibir más detalles sobre su funcionamiento y beneficios" required><br>
-          <button type="submit">Selecciona este plan</button>
-        </form>
-      </div>
-    </div>
+    <script>
+      // Columnas del plan
+      const basicoCells = document.querySelectorAll('.basico, th[data-plan="basico"]');
+      const avanzadoCells = document.querySelectorAll('.avanzado, th[data-plan="avanzado"]');
+
+      function addHoverEffect(cells) {
+        cells.forEach(cell => {
+          cell.addEventListener('mouseenter', () => {
+            cells.forEach(c => c.style.transform = 'scale(1.25)');
+          });
+          cell.addEventListener('mouseleave', () => {
+            cells.forEach(c => c.style.transform = 'scale(1)');
+          });
+        });
+      }
+
+      addHoverEffect(basicoCells);
+      addHoverEffect(avanzadoCells);
+    </script>
   </section>
 
   <section>
