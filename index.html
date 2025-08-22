@@ -95,7 +95,7 @@
     th, td {
       padding: 15px;
       text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+      transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
     }
 
     th {
@@ -117,26 +117,17 @@
       transition: transform 0.3s;
     }
 
-    /* Resaltar columna de plan al pasar el ratón */
-    table tr td:nth-child(2),
-    table tr td:nth-child(3),
-    table th:nth-child(2),
-    table th:nth-child(3) {
-      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-    }
-
-    table tr:hover td:nth-child(2) span,
-    table tr:hover td:nth-child(3) span,
-    table th:hover:nth-child(2),
-    table th:hover:nth-child(3) {
-      transform: scale(1.1);
-    }
-
-    /* Al pasar el ratón sobre la columna completa */
+    /* Resaltar columna completa al pasar ratón */
     table tr:hover td:nth-child(2),
+    table tr:hover th:nth-child(2) {
+      transform: scale(1.1);
+      background-color: #e6f2fb;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
     table tr:hover td:nth-child(3),
-    table th:nth-child(2):hover,
-    table th:nth-child(3):hover {
+    table tr:hover th:nth-child(3) {
+      transform: scale(1.1);
       background-color: #e6f2fb;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
