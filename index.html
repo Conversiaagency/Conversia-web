@@ -42,11 +42,24 @@
       margin-bottom: 20px;
     }
 
-    .plan-container {
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .feature {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .plans {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
     .plan {
@@ -164,8 +177,30 @@
   </header>
 
   <section>
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Disponibilidad 24/7</h3>
+        <p>Tu negocio siempre activo, sin importar la hora.</p>
+      </div>
+      <div class="feature">
+        <h3>Atención inmediata</h3>
+        <p>Respuestas automáticas al instante para no perder clientes.</p>
+      </div>
+      <div class="feature">
+        <h3>Recordatorios automáticos</h3>
+        <p>Envía recordatorios de citas y eventos para evitar ausencias u olvidos.</p>
+      </div>
+      <div class="feature">
+        <h3>Escalabilidad</h3>
+        <p>Atiende a miles de clientes a la vez sin aumentar costes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
     <h2>Nuestros Planes</h2>
-    <div class="plan-container">
+    <div class="plans">
       <div class="plan">
         <h3>Plan Básico</h3>
         <p class="price">100€</p>
