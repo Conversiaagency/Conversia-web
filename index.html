@@ -95,8 +95,7 @@
     th, td {
       padding: 15px;
       text-align: center;
-      transition: transform 0.2s, background-color 0.2s;
-      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
     }
 
     th {
@@ -104,21 +103,59 @@
       color: white;
     }
 
-    tr:hover {
-      background-color: #e0f0ff;
-      transform: scale(1.02);
-    }
-
     .check {
       color: #28a745; /* verde */
       font-weight: bold;
       font-size: 1.7em;
+      transition: transform 0.3s;
     }
 
     .cross {
       color: red;
       font-weight: bold;
       font-size: 1.7em;
+      transition: transform 0.3s;
+    }
+
+    /* Resaltar columna de plan al pasar el ratón */
+    table tr td:nth-child(2),
+    table tr td:nth-child(3),
+    table th:nth-child(2),
+    table th:nth-child(3) {
+      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    }
+
+    table tr:hover td:nth-child(2) span,
+    table tr:hover td:nth-child(3) span,
+    table th:hover:nth-child(2),
+    table th:hover:nth-child(3) {
+      transform: scale(1.1);
+    }
+
+    /* Al pasar el ratón sobre la columna completa */
+    table tr:hover td:nth-child(2),
+    table tr:hover td:nth-child(3),
+    table th:nth-child(2):hover,
+    table th:nth-child(3):hover {
+      background-color: #e6f2fb;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    /* Botones de seleccionar plan */
+    .select-plan {
+      margin-top: 10px;
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #0077b6;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .select-plan:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
     /* Botón flotante WhatsApp */
@@ -168,34 +205,6 @@
       font-size: 1.1em;
       color: #333;
     }
-
-    .select-plan {
-      display: none;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #0077b6;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background-color 0.3s;
-    }
-
-    .select-plan:hover {
-      background-color: #023e8a;
-    }
-
-    tr.plan-row:hover + tr.select-row td a {
-      display: inline-block;
-    }
-
-    .select-row td {
-      text-align: center;
-      background-color: #f0f8ff;
-    }
-
-    .plan-row td {
-      cursor: pointer;
-    }
   </style>
 </head>
 <body>
@@ -225,12 +234,12 @@
         <p>Convierte visitantes de tu web o redes sociales en clientes reales.</p>
       </div>
       <div class="card">
-        <h3>Análisis de conversaciones</h3>
-        <p>Obtén estadísticas y reportes para mejorar la experiencia del cliente.</p>
+        <h3>Atención multicanal</h3>
+        <p>Gestiona conversaciones desde WhatsApp, Messenger y web en un solo lugar.</p>
       </div>
       <div class="card">
-        <h3>Integración con CRM</h3>
-        <p>Conecta tu chatbot con tu sistema de gestión de clientes para automatizar flujos.</p>
+        <h3>Integración con herramientas</h3>
+        <p>Conecta tu chatbot con tu CRM, calendarios o herramientas de gestión.</p>
       </div>
     </div>
   </section>
@@ -243,44 +252,49 @@
         <th>Plan Básico - 100€</th>
         <th>Plan Avanzado - 600€</th>
       </tr>
-      <tr class="plan-row">
+      <tr>
         <td>Atención 24/7 con respuestas rápidas</td>
         <td><span class="check">✅</span></td>
         <td><span class="check">✅</span></td>
       </tr>
-      <tr class="plan-row">
+      <tr>
         <td>Preguntas frecuentes automatizadas</td>
         <td><span class="check">✅</span></td>
         <td><span class="check">✅</span></td>
       </tr>
-      <tr class="plan-row">
+      <tr>
         <td>Reserva de citas simple</td>
         <td><span class="check">✅</span></td>
         <td><span class="check">✅</span></td>
       </tr>
-      <tr class="plan-row">
+      <tr>
         <td>Recordatorios automáticos (evita ausencias u olvidos)</td>
         <td><span class="cross">✘</span></td>
         <td><span class="check">✅</span></td>
       </tr>
-      <tr class="plan-row">
+      <tr>
         <td>Soporte en múltiples canales (WhatsApp, Messenger, Web)</td>
         <td><span class="cross">✘</span></td>
         <td><span class="check">✅</span></td>
       </tr>
-      <tr class="plan-row">
+      <tr>
         <td>Integración con herramientas de gestión de clientes</td>
         <td><span class="cross">✘</span></td>
         <td><span class="check">✅</span></td>
       </tr>
-      <tr class="plan-row">
+      <tr>
         <td>Mayor personalización en flujos de conversación</td>
         <td><span class="cross">✘</span></td>
         <td><span class="check">✅</span></td>
       </tr>
-      <tr class="select-row">
-        <td colspan="1"><a class="select-plan" href="mailto:automatizatuempresa@conversiaagency.es?subject=Solicitud%20Plan%20Básico%20-%20100€&body=Hola,%0A%0ADeseo obtener el Plan Básico - 100€. ¿Podrías explicarme con más detalle cómo funciona y cómo podría implementarlo en mi negocio?%0A%0AGracias.">Selecciona este plan</a></td>
-        <td colspan="2"><a class="select-plan" href="mailto:automatizatuempresa@conversiaagency.es?subject=Solicitud%20Plan%20Avanzado%20-%20600€&body=Hola,%0A%0ADeseo obtener el Plan Avanzado - 600€. ¿Podrías explicarme con más detalle cómo funciona y cómo podría implementarlo en mi negocio?%0A%0AGracias.">Selecciona este plan</a></td>
+      <tr>
+        <td></td>
+        <td>
+          <a href="mailto:automatizatuempresa@conversiaagency.es?subject=Solicitud%20Plan%20Básico%20-%20100€%20-%20Me%20interesa%20saber%20más" class="select-plan">Selecciona este plan</a>
+        </td>
+        <td>
+          <a href="mailto:automatizatuempresa@conversiaagency.es?subject=Solicitud%20Plan%20Avanzado%20-%20600€%20-%20Me%20interesa%20saber%20más" class="select-plan">Selecciona este plan</a>
+        </td>
       </tr>
     </table>
   </section>
@@ -295,6 +309,12 @@
   </section>
 
   <section class="cta-buttons">
+    <a href="https://calendly.com/ivialonsolopez/new-meeting" target="_blank">
+      Agendar una llamada 📞
+    </a>
+    <p class="call-text">
+      ¿Qué te parece si agendamos una llamada rápida para verlo juntos y decidir cuál plan se adapta mejor a vuestro negocio?📅
+    </p>
     <a href="mailto:automatizatuempresa@conversiaagency.es" target="_blank">
       Contáctanos 📩
     </a>
