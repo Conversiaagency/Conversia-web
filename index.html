@@ -86,7 +86,7 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 30px;
-      table-layout: fixed;
+      transition: transform 0.3s ease;
     }
 
     table, th, td {
@@ -96,7 +96,7 @@
     th, td {
       padding: 15px;
       text-align: center;
-      transition: transform 0.3s, background-color 0.3s;
+      transition: background-color 0.3s, transform 0.3s;
     }
 
     th {
@@ -104,15 +104,10 @@
       color: white;
     }
 
-    td.plan {
-      cursor: pointer;
-      transition: transform 0.3s, background-color 0.3s;
-    }
-
-    /* Resaltar toda la columna al pasar el ratón */
-    td.plan:hover, td.plan:hover ~ td.plan {
-      transform: scale(1.05);
-      background-color: #e6f0fa;
+    /* Resaltar fila y agrandar al pasar el ratón sobre plan */
+    tr:hover td {
+      background-color: #d0e8ff;
+      transform: scale(1.02);
     }
 
     .check {
@@ -174,23 +169,6 @@
       font-size: 1.1em;
       color: #333;
     }
-
-    .plan-button {
-      margin-top: 10px;
-      display: inline-block;
-      padding: 8px 15px;
-      background-color: #0077b6;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: transform 0.3s, background-color 0.3s;
-    }
-
-    .plan-button:hover {
-      transform: scale(1.1);
-      background-color: #023e8a;
-    }
-
   </style>
 </head>
 <body>
@@ -219,6 +197,14 @@
         <h3>Captación de leads</h3>
         <p>Convierte visitantes de tu web o redes sociales en clientes reales.</p>
       </div>
+      <div class="card">
+        <h3>Analítica avanzada</h3>
+        <p>Obtén reportes y métricas sobre la interacción de tus clientes con el chatbot.</p>
+      </div>
+      <div class="card">
+        <h3>Integración con CRM</h3>
+        <p>Sincroniza los datos de tus clientes automáticamente con tu CRM.</p>
+      </div>
     </div>
   </section>
 
@@ -227,51 +213,51 @@
     <table>
       <tr>
         <th>Características</th>
-        <th class="plan">Plan Básico - 100€</th>
-        <th class="plan">Plan Avanzado - 600€</th>
+        <th>Plan Básico - 100€</th>
+        <th>Plan Avanzado - 600€</th>
       </tr>
       <tr>
         <td>Atención 24/7 con respuestas rápidas</td>
-        <td class="plan"><span class="check">✅</span></td>
-        <td class="plan"><span class="check">✅</span></td>
+        <td><span class="check">✅</span></td>
+        <td><span class="check">✅</span></td>
       </tr>
       <tr>
         <td>Preguntas frecuentes automatizadas</td>
-        <td class="plan"><span class="check">✅</span></td>
-        <td class="plan"><span class="check">✅</span></td>
+        <td><span class="check">✅</span></td>
+        <td><span class="check">✅</span></td>
       </tr>
       <tr>
         <td>Reserva de citas simple</td>
-        <td class="plan"><span class="check">✅</span></td>
-        <td class="plan"><span class="check">✅</span></td>
+        <td><span class="check">✅</span></td>
+        <td><span class="check">✅</span></td>
       </tr>
       <tr>
         <td>Recordatorios automáticos (evita ausencias u olvidos)</td>
-        <td class="plan"><span class="cross">✘</span></td>
-        <td class="plan"><span class="check">✅</span></td>
+        <td><span class="cross">✘</span></td>
+        <td><span class="check">✅</span></td>
       </tr>
       <tr>
         <td>Soporte en múltiples canales (WhatsApp, Messenger, Web)</td>
-        <td class="plan"><span class="cross">✘</span></td>
-        <td class="plan"><span class="check">✅</span></td>
+        <td><span class="cross">✘</span></td>
+        <td><span class="check">✅</span></td>
       </tr>
       <tr>
         <td>Integración con herramientas de gestión de clientes</td>
-        <td class="plan"><span class="cross">✘</span></td>
-        <td class="plan"><span class="check">✅</span></td>
+        <td><span class="cross">✘</span></td>
+        <td><span class="check">✅</span></td>
       </tr>
       <tr>
         <td>Mayor personalización en flujos de conversación</td>
-        <td class="plan"><span class="cross">✘</span></td>
-        <td class="plan"><span class="check">✅</span></td>
+        <td><span class="cross">✘</span></td>
+        <td><span class="check">✅</span></td>
       </tr>
       <tr>
         <td></td>
-        <td class="plan">
-          <a href="mailto:automatizatuempresa@conversiaagency.es?subject=Plan%20Básico" class="plan-button">Seleccionar este plan</a>
+        <td>
+          <a href="mailto:automatizatuempresa@conversiaagency.es?subject=Plan%20Básico" target="_blank">Seleccionar este plan</a>
         </td>
-        <td class="plan">
-          <a href="mailto:automatizatuempresa@conversiaagency.es?subject=Plan%20Avanzado" class="plan-button">Seleccionar este plan</a>
+        <td>
+          <a href="mailto:automatizatuempresa@conversiaagency.es?subject=Plan%20Avanzado" target="_blank">Seleccionar este plan</a>
         </td>
       </tr>
     </table>
