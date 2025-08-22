@@ -73,26 +73,38 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 30px;
-    }
-    table, th, td {
-      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
     }
     th, td {
       padding: 15px;
       text-align: center;
+      border: 1px solid #ddd;
+      transition: all 0.3s ease;
     }
     th {
-      background-color: #0077b6;
+      background: linear-gradient(90deg, #0077b6, #00aaff);
       color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f9fcff;
+    }
+    tr:hover {
+      background-color: #e0f0ff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transform: scale(1.01);
     }
     .check {
       color: green;
       font-weight: bold;
+      font-size: 1.2em;
     }
     .cross {
       color: red;
       font-weight: bold;
-      font-size: 1.5em; /* cruces más grandes */
+      font-size: 1.5em;
     }
     footer {
       background-color: #0077b6;
@@ -182,9 +194,9 @@
   </section>
 
   <section class="cta-buttons">
-    <a href="mailto:automatizatuempresa@conversiaagency.es" target="_blank">Contáctanos 📩</a>
-    <p>¿Qué te parece si agendamos una llamada rápida para verlo juntos y decidir cuál plan se adapta mejor a vuestro negocio? 📅</p>
     <a href="https://calendly.com/ivialonsolopez/new-meeting" target="_blank">Agendar una Llamada</a>
+    <p>¿Qué te parece si agendamos una llamada rápida para verlo juntos y decidir cuál plan se adapta mejor a vuestro negocio? 📅</p>
+    <a href="mailto:automatizatuempresa@conversiaagency.es" target="_blank">Contáctanos 📩</a>
   </section>
 
   <a href="https://api.whatsapp.com/send?phone=685508883&text=%20" class="floating-whatsapp" target="_blank">
@@ -192,8 +204,8 @@
   </a>
 
   <footer>
-    <p>📧 automatizatuempresa@conversiaagency.es</p>
     <p>© 2025 Conversia Agency - Todos los derechos reservados</p>
+    <p>📧 automatizatuempresa@conversiaagency.es</p>
   </footer>
 </body>
 </html>
