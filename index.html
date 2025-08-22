@@ -86,7 +86,6 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 30px;
-      transition: transform 0.3s ease;
     }
 
     table, th, td {
@@ -96,7 +95,8 @@
     th, td {
       padding: 15px;
       text-align: center;
-      transition: background-color 0.3s, transform 0.3s;
+      transition: transform 0.2s, background-color 0.2s;
+      position: relative;
     }
 
     th {
@@ -104,9 +104,8 @@
       color: white;
     }
 
-    /* Resaltar fila y agrandar al pasar el ratón sobre plan */
-    tr:hover td {
-      background-color: #d0e8ff;
+    tr:hover {
+      background-color: #e0f0ff;
       transform: scale(1.02);
     }
 
@@ -169,6 +168,34 @@
       font-size: 1.1em;
       color: #333;
     }
+
+    .select-plan {
+      display: none;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #0077b6;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .select-plan:hover {
+      background-color: #023e8a;
+    }
+
+    tr.plan-row:hover + tr.select-row td a {
+      display: inline-block;
+    }
+
+    .select-row td {
+      text-align: center;
+      background-color: #f0f8ff;
+    }
+
+    .plan-row td {
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -198,12 +225,12 @@
         <p>Convierte visitantes de tu web o redes sociales en clientes reales.</p>
       </div>
       <div class="card">
-        <h3>Analítica avanzada</h3>
-        <p>Obtén reportes y métricas sobre la interacción de tus clientes con el chatbot.</p>
+        <h3>Análisis de conversaciones</h3>
+        <p>Obtén estadísticas y reportes para mejorar la experiencia del cliente.</p>
       </div>
       <div class="card">
         <h3>Integración con CRM</h3>
-        <p>Sincroniza los datos de tus clientes automáticamente con tu CRM.</p>
+        <p>Conecta tu chatbot con tu sistema de gestión de clientes para automatizar flujos.</p>
       </div>
     </div>
   </section>
@@ -216,49 +243,44 @@
         <th>Plan Básico - 100€</th>
         <th>Plan Avanzado - 600€</th>
       </tr>
-      <tr>
+      <tr class="plan-row">
         <td>Atención 24/7 con respuestas rápidas</td>
         <td><span class="check">✅</span></td>
         <td><span class="check">✅</span></td>
       </tr>
-      <tr>
+      <tr class="plan-row">
         <td>Preguntas frecuentes automatizadas</td>
         <td><span class="check">✅</span></td>
         <td><span class="check">✅</span></td>
       </tr>
-      <tr>
+      <tr class="plan-row">
         <td>Reserva de citas simple</td>
         <td><span class="check">✅</span></td>
         <td><span class="check">✅</span></td>
       </tr>
-      <tr>
+      <tr class="plan-row">
         <td>Recordatorios automáticos (evita ausencias u olvidos)</td>
         <td><span class="cross">✘</span></td>
         <td><span class="check">✅</span></td>
       </tr>
-      <tr>
+      <tr class="plan-row">
         <td>Soporte en múltiples canales (WhatsApp, Messenger, Web)</td>
         <td><span class="cross">✘</span></td>
         <td><span class="check">✅</span></td>
       </tr>
-      <tr>
+      <tr class="plan-row">
         <td>Integración con herramientas de gestión de clientes</td>
         <td><span class="cross">✘</span></td>
         <td><span class="check">✅</span></td>
       </tr>
-      <tr>
+      <tr class="plan-row">
         <td>Mayor personalización en flujos de conversación</td>
         <td><span class="cross">✘</span></td>
         <td><span class="check">✅</span></td>
       </tr>
-      <tr>
-        <td></td>
-        <td>
-          <a href="mailto:automatizatuempresa@conversiaagency.es?subject=Plan%20Básico" target="_blank">Seleccionar este plan</a>
-        </td>
-        <td>
-          <a href="mailto:automatizatuempresa@conversiaagency.es?subject=Plan%20Avanzado" target="_blank">Seleccionar este plan</a>
-        </td>
+      <tr class="select-row">
+        <td colspan="1"><a class="select-plan" href="mailto:automatizatuempresa@conversiaagency.es?subject=Solicitud%20Plan%20Básico%20-%20100€&body=Hola,%0A%0ADeseo obtener el Plan Básico - 100€. ¿Podrías explicarme con más detalle cómo funciona y cómo podría implementarlo en mi negocio?%0A%0AGracias.">Selecciona este plan</a></td>
+        <td colspan="2"><a class="select-plan" href="mailto:automatizatuempresa@conversiaagency.es?subject=Solicitud%20Plan%20Avanzado%20-%20600€&body=Hola,%0A%0ADeseo obtener el Plan Avanzado - 600€. ¿Podrías explicarme con más detalle cómo funciona y cómo podría implementarlo en mi negocio?%0A%0AGracias.">Selecciona este plan</a></td>
       </tr>
     </table>
   </section>
@@ -273,12 +295,6 @@
   </section>
 
   <section class="cta-buttons">
-    <a href="https://calendly.com/ivialonsolopez/new-meeting" target="_blank">
-      Agendar una llamada 📞
-    </a>
-    <p class="call-text">
-      ¿Qué te parece si agendamos una llamada rápida para verlo juntos y decidir cuál plan se adapta mejor a vuestro negocio?📅
-    </p>
     <a href="mailto:automatizatuempresa@conversiaagency.es" target="_blank">
       Contáctanos 📩
     </a>
