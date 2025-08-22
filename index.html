@@ -6,167 +6,109 @@
   <title>Conversia Agency - Chatbots Inteligentes</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f8fb;
       color: #333;
     }
-
     header {
-      background-color: #003366; /* Azul oscuro */
+      background-color: #0077b6;
       color: white;
-      padding: 30px;
       text-align: center;
+      padding: 50px 20px;
     }
-
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.5em;
     }
-
     header p {
-      margin: 10px 0 0;
-      font-size: 1.2rem;
-      color: #f2f2f2;
+      font-size: 1.2em;
     }
-
     section {
       padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
     }
-
     h2 {
-      color: #003366;
+      color: #0077b6;
+    }
+    .cta-buttons {
       text-align: center;
-      margin-bottom: 20px;
+      margin: 30px 0;
     }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+    .cta-buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      background-color: #0077b6;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
     }
-
-    .feature {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    .cta-buttons a:hover {
+      background-color: #023e8a;
     }
-
-    .plans {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
+    .floating-whatsapp {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 100;
     }
-
-    .plan {
-      background: white;
+    .floating-whatsapp i {
+      margin-top: 15px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+    table, th, td {
       border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 20px;
-      width: 300px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
     }
-
-    .plan:hover {
-      transform: scale(1.05);
+    th, td {
+      padding: 15px;
+      text-align: center;
     }
-
-    .plan h3 {
-      color: #003366;
+    th {
+      background-color: #0077b6;
+      color: white;
     }
-
-    .plan .price {
-      font-size: 1.5rem;
-      color: #ff6600; /* Naranja */
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li {
-      margin: 10px 0;
-    }
-
     .check {
       color: green;
       font-weight: bold;
     }
-
     .cross {
       color: red;
       font-weight: bold;
     }
-
-    .cta {
-      display: block;
-      margin: 20px auto 0;
-      padding: 12px 20px;
-      background-color: #ff6600; /* Botón naranja */
-      color: white;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-      transition: background-color 0.3s;
-    }
-
-    .cta:hover {
-      background-color: #e65c00;
-    }
-
-    .success {
-      background-color: #fff;
-      border-left: 6px solid #ff6600;
-      padding: 20px;
-      margin: 20px auto;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .testimonial {
-      font-style: italic;
-      margin-top: 15px;
-    }
-
     footer {
-      background-color: #003366;
+      background-color: #0077b6;
       color: white;
       text-align: center;
       padding: 20px;
       margin-top: 40px;
     }
-
-    /* Botón flotante de WhatsApp */
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      text-decoration: none;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      transition: transform 0.2s;
+    blockquote {
+      border-left: 5px solid #0077b6;
+      padding-left: 15px;
+      color: #555;
+      font-style: italic;
+      margin: 20px 0;
     }
-
-    .whatsapp:hover {
-      transform: scale(1.1);
+    .author {
+      text-align: right;
+      font-weight: bold;
+      margin-top: -10px;
     }
   </style>
 </head>
@@ -177,71 +119,76 @@
   </header>
 
   <section>
-    <h2>¿Por qué elegirnos?</h2>
-    <div class="features">
-      <div class="feature">
-        <h3>Disponibilidad 24/7</h3>
-        <p>Tu negocio siempre activo, sin importar la hora.</p>
-      </div>
-      <div class="feature">
-        <h3>Atención inmediata</h3>
-        <p>Respuestas automáticas al instante para no perder clientes.</p>
-      </div>
-      <div class="feature">
-        <h3>Recordatorios automáticos</h3>
-        <p>Envía recordatorios de citas y eventos para evitar ausencias u olvidos.</p>
-      </div>
-      <div class="feature">
-        <h3>Escalabilidad</h3>
-        <p>Atiende a miles de clientes a la vez sin aumentar costes.</p>
-      </div>
-    </div>
+    <h2>Quiénes somos</h2>
+    <p>En Conversia Agency ayudamos a empresas como la tuya a ahorrar tiempo y mejorar su atención al cliente mediante chatbots personalizados que trabajan 24/7. Nuestro objetivo es que puedas enfocarte en hacer crecer tu negocio mientras nosotros automatizamos tus procesos de comunicación.</p>
   </section>
 
   <section>
-    <h2>Nuestros Planes</h2>
-    <div class="plans">
-      <div class="plan">
-        <h3>Plan Básico</h3>
-        <p class="price">100€</p>
-        <ul>
-          <li><span class="check">✔</span> Respuesta automática a preguntas frecuentes</li>
-          <li><span class="check">✔</span> Reservas de citas simples</li>
-          <li><span class="check">✔</span> Flujos básicos de conversación</li>
-          <li><span class="cross">✘</span> Recordatorios automáticos</li>
-          <li><span class="cross">✘</span> Integración con varias plataformas</li>
-          <li><span class="cross">✘</span> Personalización avanzada</li>
-        </ul>
-      </div>
-
-      <div class="plan">
-        <h3>Plan Avanzado</h3>
-        <p class="price">600€</p>
-        <ul>
-          <li><span class="check">✔</span> Todo lo del Plan Básico</li>
-          <li><span class="check">✔</span> Recordatorios automáticos de citas</li>
-          <li><span class="check">✔</span> Integración con varias plataformas (WhatsApp, web, Messenger)</li>
-          <li><span class="check">✔</span> Personalización avanzada del chatbot</li>
-          <li><span class="check">✔</span> Análisis de conversaciones</li>
-        </ul>
-      </div>
-    </div>
-    <a href="https://calendly.com/ivialonsolopez/new-meeting" class="cta">Agendar una llamada</a>
+    <h2>Planes y Precios</h2>
+    <table>
+      <tr>
+        <th>Características</th>
+        <th>Plan Básico - 100€</th>
+        <th>Plan Avanzado - 600€</th>
+      </tr>
+      <tr>
+        <td>Atención 24/7 con respuestas rápidas</td>
+        <td><span class="check">✔</span></td>
+        <td><span class="check">✔</span></td>
+      </tr>
+      <tr>
+        <td>Preguntas frecuentes automatizadas</td>
+        <td><span class="check">✔</span></td>
+        <td><span class="check">✔</span></td>
+      </tr>
+      <tr>
+        <td>Reserva de citas simple</td>
+        <td><span class="check">✔</span></td>
+        <td><span class="check">✔</span></td>
+      </tr>
+      <tr>
+        <td>Recordatorios automáticos (evita ausencias u olvidos)</td>
+        <td><span class="cross">✘</span></td>
+        <td><span class="check">✔</span></td>
+      </tr>
+      <tr>
+        <td>Soporte en múltiples canales (WhatsApp, Messenger, Web)</td>
+        <td><span class="cross">✘</span></td>
+        <td><span class="check">✔</span></td>
+      </tr>
+      <tr>
+        <td>Integración con herramientas de gestión de clientes</td>
+        <td><span class="cross">✘</span></td>
+        <td><span class="check">✔</span></td>
+      </tr>
+      <tr>
+        <td>Mayor personalización en flujos de conversación</td>
+        <td><span class="cross">✘</span></td>
+        <td><span class="check">✔</span></td>
+      </tr>
+    </table>
   </section>
 
   <section>
     <h2>Caso de Éxito</h2>
-    <div class="success">
-      <p>Una clínica dental en Madrid implementó nuestro chatbot para gestionar citas y responder dudas frecuentes. En solo 3 meses, lograron reducir un 40% las llamadas telefónicas y aumentar las reservas online en un 25%.</p>
-      <p class="testimonial">“El chatbot ha sido un cambio increíble. Ahora mis pacientes pueden reservar cita incluso fuera del horario laboral, y mi equipo tiene más tiempo para enfocarse en lo importante.”<br>— Dra. Laura Martínez</p>
-    </div>
+    <p>Uno de nuestros clientes, la clínica dental <strong>Sonrisas Plus</strong>, logró reducir en un 40% las ausencias de citas y aumentó en un 25% las nuevas reservas en solo 3 meses gracias a la implementación de nuestro chatbot avanzado.</p>
+    <blockquote>
+      “Antes teníamos muchos problemas con pacientes que olvidaban sus citas y perdíamos tiempo contestando las mismas preguntas una y otra vez. Desde que Conversia nos implementó el chatbot, todo es mucho más ágil. Nuestros pacientes reciben recordatorios automáticos y hasta pueden reservar cita por WhatsApp en segundos. Es una herramienta que realmente nos ha cambiado la gestión.”  
+    </blockquote>
+    <p class="author">— Dra. Laura Méndez, Clínica Sonrisas Plus</p>
   </section>
+
+  <section class="cta-buttons">
+    <a href="https://api.whatsapp.com/send?phone=685508883&text=%20" target="_blank">Escríbenos por WhatsApp</a>
+    <a href="https://calendly.com/ivialonsolopez/new-meeting" target="_blank">Agendar una Llamada</a>
+  </section>
+
+  <a href="https://api.whatsapp.com/send?phone=685508883&text=%20" class="floating-whatsapp" target="_blank">
+    <i>💬</i>
+  </a>
 
   <footer>
     <p>© 2025 Conversia Agency - Todos los derechos reservados</p>
   </footer>
-
-  <!-- Botón flotante de WhatsApp -->
-  <a href="https://api.whatsapp.com/send?phone=685508883&text=%20" class="whatsapp">💬</a>
 </body>
 </html>
