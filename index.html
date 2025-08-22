@@ -86,6 +86,7 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 30px;
+      table-layout: fixed;
     }
 
     table, th, td {
@@ -95,11 +96,23 @@
     th, td {
       padding: 15px;
       text-align: center;
+      transition: transform 0.3s, background-color 0.3s;
     }
 
     th {
       background-color: #0077b6;
       color: white;
+    }
+
+    td.plan {
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    /* Resaltar toda la columna al pasar el ratón */
+    td.plan:hover, td.plan:hover ~ td.plan {
+      transform: scale(1.05);
+      background-color: #e6f0fa;
     }
 
     .check {
@@ -111,7 +124,7 @@
     .cross {
       color: red;
       font-weight: bold;
-      font-size: 2em; /* aumento de tamaño */
+      font-size: 1.7em;
     }
 
     /* Botón flotante WhatsApp */
@@ -161,6 +174,23 @@
       font-size: 1.1em;
       color: #333;
     }
+
+    .plan-button {
+      margin-top: 10px;
+      display: inline-block;
+      padding: 8px 15px;
+      background-color: #0077b6;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .plan-button:hover {
+      transform: scale(1.1);
+      background-color: #023e8a;
+    }
+
   </style>
 </head>
 <body>
@@ -197,43 +227,52 @@
     <table>
       <tr>
         <th>Características</th>
-        <th>Plan Básico - 100€</th>
-        <th>Plan Avanzado - 600€</th>
+        <th class="plan">Plan Básico - 100€</th>
+        <th class="plan">Plan Avanzado - 600€</th>
       </tr>
       <tr>
         <td>Atención 24/7 con respuestas rápidas</td>
-        <td><span class="check">✅</span></td>
-        <td><span class="check">✅</span></td>
+        <td class="plan"><span class="check">✅</span></td>
+        <td class="plan"><span class="check">✅</span></td>
       </tr>
       <tr>
         <td>Preguntas frecuentes automatizadas</td>
-        <td><span class="check">✅</span></td>
-        <td><span class="check">✅</span></td>
+        <td class="plan"><span class="check">✅</span></td>
+        <td class="plan"><span class="check">✅</span></td>
       </tr>
       <tr>
         <td>Reserva de citas simple</td>
-        <td><span class="check">✅</span></td>
-        <td><span class="check">✅</span></td>
+        <td class="plan"><span class="check">✅</span></td>
+        <td class="plan"><span class="check">✅</span></td>
       </tr>
       <tr>
         <td>Recordatorios automáticos (evita ausencias u olvidos)</td>
-        <td><span class="cross">✘</span></td>
-        <td><span class="check">✅</span></td>
+        <td class="plan"><span class="cross">✘</span></td>
+        <td class="plan"><span class="check">✅</span></td>
       </tr>
       <tr>
         <td>Soporte en múltiples canales (WhatsApp, Messenger, Web)</td>
-        <td><span class="cross">✘</span></td>
-        <td><span class="check">✅</span></td>
+        <td class="plan"><span class="cross">✘</span></td>
+        <td class="plan"><span class="check">✅</span></td>
       </tr>
       <tr>
         <td>Integración con herramientas de gestión de clientes</td>
-        <td><span class="cross">✘</span></td>
-        <td><span class="check">✅</span></td>
+        <td class="plan"><span class="cross">✘</span></td>
+        <td class="plan"><span class="check">✅</span></td>
       </tr>
       <tr>
         <td>Mayor personalización en flujos de conversación</td>
-        <td><span class="cross">✘</span></td>
-        <td><span class="check">✅</span></td>
+        <td class="plan"><span class="cross">✘</span></td>
+        <td class="plan"><span class="check">✅</span></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="plan">
+          <a href="mailto:automatizatuempresa@conversiaagency.es?subject=Plan%20Básico" class="plan-button">Seleccionar este plan</a>
+        </td>
+        <td class="plan">
+          <a href="mailto:automatizatuempresa@conversiaagency.es?subject=Plan%20Avanzado" class="plan-button">Seleccionar este plan</a>
+        </td>
       </tr>
     </table>
   </section>
