@@ -164,14 +164,6 @@
       font-size: 1.1em;
       color: #333;
     }
-
-    /* Chatbot flotante */
-    .chatbot-container {
-      position: fixed;
-      bottom: 90px; /* Arriba del botón WhatsApp */
-      right: 20px;
-      z-index: 9999;
-    }
   </style>
 </head>
 <body>
@@ -257,7 +249,6 @@
     </table>
 
     <script>
-      // Columnas del plan
       const basicoCells = document.querySelectorAll('.basico, th[data-plan="basico"]');
       const avanzadoCells = document.querySelectorAll('.avanzado, th[data-plan="avanzado"]');
 
@@ -303,10 +294,50 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:35px;height:35px;">
   </a>
 
-  <!-- Chatbot flotante -->
-  <div class="chatbot-container">
+  <!-- Chatbot flotante tipo burbuja -->
+  <div id="chatbot-bubble" style="
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #0077b6;
+    border-radius: 50%;
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  ">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Chat_icon.svg" alt="Chat" style="width:35px;height:35px;">
+  </div>
+
+  <!-- Contenedor del chat (inicialmente oculto) -->
+  <div id="chatbot-widget" style="
+    position: fixed;
+    bottom: 160px;
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    z-index: 9999;
+    display: none;
+  ">
     <script src="https://app.gptchatbot.it/widget.js" data-bot-id="TU_BOT_ID"></script>
   </div>
+
+  <script>
+    const bubble = document.getElementById('chatbot-bubble');
+    const widget = document.getElementById('chatbot-widget');
+
+    bubble.addEventListener('click', () => {
+      if(widget.style.display === 'none'){
+        widget.style.display = 'block';
+      } else {
+        widget.style.display = 'none';
+      }
+    });
+  </script>
 
   <footer>
     <p>© 2025 Conversia Agency - Todos los derechos reservados</p>
@@ -321,6 +352,11 @@
         conversia.agency
       </a>
     </div>
+  </footer>
+
+</body>
+</html>
+
   </footer>
 
 </body>
