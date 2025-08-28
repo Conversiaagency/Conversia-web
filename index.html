@@ -12,6 +12,7 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      background: #fff;
     }
 
     header {
@@ -25,8 +26,21 @@
 
     main {
       flex: 1;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
+    }
+
+    main h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    main p {
+      font-size: 18px;
+      color: #444;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
     footer {
@@ -35,15 +49,16 @@
       font-size: 14px;
       color: #555;
       background: #f4f4f4;
+      line-height: 1.6;
     }
 
     /* Ventana del chatbot */
     .chatbot-window {
       position: fixed;
-      bottom: 170px; /* como lo tenías */
+      bottom: 170px;
       right: 20px;
-      width: 295px;   /* un poquito más pequeño */
-      height: 390px;  /* un poquito más bajo */
+      width: 295px;   /* más estrecho */
+      height: 390px;  /* más bajo */
       border: none;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
@@ -86,7 +101,10 @@
   <!-- Contenido principal -->
   <main>
     <h1>Bienvenido a Conversia Agency</h1>
-    <p>Automatizamos tu empresa con soluciones de chatbots y marketing digital.</p>
+    <p>
+      Automatizamos tu empresa con soluciones de chatbots, atención al cliente 24/7 
+      y estrategias de marketing digital que convierten.
+    </p>
   </main>
 
   <!-- Footer -->
@@ -120,4 +138,3 @@
   </script>
 </body>
 </html>
-
