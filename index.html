@@ -39,7 +39,6 @@
       color: #0077b6;
     }
 
-    /* Servicios con animación */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -81,7 +80,6 @@
       background-color: #023e8a;
     }
 
-    /* Tabla comparativa */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -117,7 +115,6 @@
       transition: transform 0.3s ease;
     }
 
-    /* Botón flotante WhatsApp */
     .floating-whatsapp {
       position: fixed;
       width: 60px;
@@ -294,7 +291,7 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:35px;height:35px;">
   </a>
 
-  <!-- Chatbot flotante tipo burbuja -->
+  <!-- Chatbot flotante tipo burbuja con emoji 💬 -->
   <div id="chatbot-bubble" style="
     position: fixed;
     bottom: 90px;
@@ -309,11 +306,11 @@
     align-items: center;
     justify-content: center;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-  ">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Chat_icon.svg" alt="Chat" style="width:35px;height:35px;">
-  </div>
+    font-size: 28px;
+    color: white;
+  ">💬</div>
 
-  <!-- Contenedor del chat (inicialmente oculto) -->
+  <!-- Contenedor del chat -->
   <div id="chatbot-widget" style="
     position: fixed;
     bottom: 160px;
@@ -321,21 +318,22 @@
     width: 350px;
     height: 500px;
     z-index: 9999;
-    display: none;
-  ">
-    <script src="https://app.gptchatbot.it/widget.js" data-bot-id="TU_BOT_ID"></script>
-  </div>
+  "></div>
 
   <script>
     const bubble = document.getElementById('chatbot-bubble');
     const widget = document.getElementById('chatbot-widget');
+    let chatbotLoaded = false; // para cargar solo una vez
 
     bubble.addEventListener('click', () => {
-      if(widget.style.display === 'none'){
-        widget.style.display = 'block';
-      } else {
-        widget.style.display = 'none';
+      if(!chatbotLoaded){
+        const script = document.createElement('script');
+        script.src = "https://app.gptchatbot.it/widget.js";
+        script.dataset.botId = "TU_BOT_ID"; // reemplaza con tu ID
+        widget.appendChild(script);
+        chatbotLoaded = true;
       }
+      widget.style.display = (widget.style.display === "block") ? "none" : "block";
     });
   </script>
 
@@ -352,11 +350,6 @@
         conversia.agency
       </a>
     </div>
-  </footer>
-
-</body>
-</html>
-
   </footer>
 
 </body>
