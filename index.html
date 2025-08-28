@@ -164,6 +164,14 @@
       font-size: 1.1em;
       color: #333;
     }
+
+    /* Chatbot flotante */
+    .chatbot-container {
+      position: fixed;
+      bottom: 90px; /* Arriba del botón WhatsApp */
+      right: 20px;
+      z-index: 9999;
+    }
   </style>
 </head>
 <body>
@@ -294,6 +302,11 @@
   <a href="https://api.whatsapp.com/send?phone=685508883&text=%20" class="floating-whatsapp" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:35px;height:35px;">
   </a>
+
+  <!-- Chatbot flotante -->
+  <div class="chatbot-container">
+    <script src="https://app.gptchatbot.it/widget.js" data-bot-id="TU_BOT_ID"></script>
+  </div>
 
   <footer>
     <p>© 2025 Conversia Agency - Todos los derechos reservados</p>
