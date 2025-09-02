@@ -170,8 +170,8 @@
       position: fixed;
       bottom: 170px;
       right: 20px;
-      width: 295px;   /* más estrecho */
-      height: 390px;  /* más bajo */
+      width: 295px;
+      height: 390px;
       border: none;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
@@ -305,7 +305,7 @@
     </script>
   </section>
 
-  <!-- NUEVA SECCIÓN DE FINANCIACIÓN INTEGRADA DEBAJO DE LA TABLA DE PRECIOS -->
+  <!-- NUEVA SECCIÓN DE FINANCIACIÓN -->
   <section>
     <h2>🚀 Tu servicio completo, sin coste inicial</h2>
     <p>Empieza a disfrutar de nuestro servicio <strong>desde hoy mismo</strong> sin tener que pagar el coste inicial completo. Con nuestra opción de financiación, tu cuota mensual incluye <strong>el producto, mantenimiento, revisiones y actualizaciones</strong> necesarias durante todo el periodo.</p>
@@ -351,6 +351,32 @@
       </a>
     </div>
   </footer>
+
+  <!-- Ventana del Chatbot -->
+  <iframe
+    id="chatbot-widget-window-iframe"
+    src="https://app.gptchatbot.it/widget/555e83afa42747d3b2e4f603908d2d00"
+    class="chatbot-window"
+    allow="clipboard-read; clipboard-write"
+  ></iframe>
+
+  <!-- Burbuja del Chatbot -->
+  <div id="chatbot-widget-bubble" class="chatbot-bubble">
+    💬
+  </div>
+
+  <script>
+    const chatbotBubble = document.getElementById("chatbot-widget-bubble");
+    const chatbotWindow = document.getElementById("chatbot-widget-window-iframe");
+
+    chatbotBubble.addEventListener("click", () => {
+      chatbotWindow.style.display =
+        chatbotWindow.style.display === "block" ? "none" : "block";
+    });
+  </script>
+</body>
+</html>
+
 
   <!-- Ventana del Chatbot -->
   <iframe
