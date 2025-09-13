@@ -12,6 +12,19 @@
       background-color: #f4f8fb;
       color: #333;
     }
+    /* CABECERO SUPERIOR */
+    .topbar {
+      background-color: #023e8a;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-weight: bold;
+      font-size: 1.2em;
+      letter-spacing: 1px;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+    }
     header {
       background-color: #0077b6;
       color: white;
@@ -200,15 +213,15 @@
     .financiacion p {
       font-size: 1.1em;
     }
-    .caso-exito img {
-      max-width: 400px;
-      display: block;
-      margin: 20px auto;
-      border-radius: 10px;
-    }
   </style>
 </head>
 <body>
+  <!-- CABECERO SUPERIOR -->
+  <div class="topbar">
+    Conversia Agency
+  </div>
+
+  <!-- HEADER -->
   <header>
     <div style="max-width:500px;">
       <h1>⏰ Tus clientes no esperan… ¿quieres seguir perdiendo ventas?</h1>
@@ -222,6 +235,7 @@
     </div>
   </header>
 
+  <!-- BENEFICIOS -->
   <section style="text-align:center; background:#eaf6fb; padding:30px;">
     <h2>🚀 Beneficios para tu negocio</h2>
     <div class="grid">
@@ -243,6 +257,7 @@
     </div>
   </section>
 
+  <!-- SERVICIOS -->
   <section>
     <h2>¿Cómo podemos ayudarte?</h2>
     <div class="grid">
@@ -279,6 +294,7 @@
     </div>
   </section>
 
+  <!-- PLANES -->
   <section>
     <h2>Planes y Precios</h2>
     <table>
@@ -330,9 +346,9 @@
     </div>
   </section>
 
+  <!-- CASO DE ÉXITO SIN FOTO -->
   <section class="caso-exito">
     <h2>Caso de Éxito</h2>
-    <img src="https://cdn-icons-png.flaticon.com/512/3079/3079286.png" alt="Clínica Dental">
     <p>Uno de nuestros clientes, la clínica dental <strong>Sonrisas Plus</strong>, redujo un 40% las ausencias y aumentó un 25% sus reservas en solo 3 meses gracias a nuestro chatbot avanzado.</p>
     <blockquote>
       “Antes perdíamos mucho tiempo contestando las mismas preguntas y gestionando cancelaciones. Desde que Conversia nos implementó el chatbot, todo es más ágil. Los pacientes reciben recordatorios automáticos y reservan por WhatsApp en segundos. Nos ha cambiado la gestión por completo.”
@@ -340,16 +356,19 @@
     <p class="author">— Dra. Laura Méndez, Clínica Sonrisas Plus</p>
   </section>
 
+  <!-- CTA -->
   <section class="cta-buttons">
     <a href="https://calendly.com/ivialonsolopez/new-meeting" target="_blank"> Agendar una llamada 📞 </a>
     <p class="call-text"> ¿Qué te parece si agendamos una llamada rápida para verlo juntos y decidir cuál plan se adapta mejor a vuestro negocio? </p>
     <a href="mailto:automatizatuempresa@conversiaagency.es" target="_blank"> Contáctanos 📩 </a>
   </section>
 
+  <!-- WHATSAPP -->
   <a href="https://api.whatsapp.com/send?phone=685508883&text=%20" class="floating-whatsapp" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:35px;height:35px;">
   </a>
 
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 Conversia Agency - Todos los derechos reservados</p>
     <p>📧 automatizatuempresa@conversiaagency.es</p>
@@ -363,6 +382,7 @@
     </div>
   </footer>
 
+  <!-- CHATBOT -->
   <iframe id="chatbot-widget-window-iframe" src="https://app.gptchatbot.it/widget/555e83afa42747d3b2e4f603908d2d00" class="chatbot-window" allow="clipboard-read; clipboard-write"></iframe>
   <div id="chatbot-widget-bubble" class="chatbot-bubble">💬</div>
 
