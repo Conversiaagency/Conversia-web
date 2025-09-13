@@ -26,7 +26,7 @@
       z-index: 200;
     }
     header {
-      background-color: #0077b6;
+      background: linear-gradient(135deg, #0077b6, #00b894);
       color: white;
       padding: 50px 20px;
       display: flex;
@@ -84,15 +84,17 @@
     .cta-buttons a {
       display: inline-block;
       margin: 10px;
-      padding: 12px 25px;
-      background-color: #0077b6;
-      color: white;
+      padding: 14px 28px;
+      background-color: #f9c74f; /* amarillo */
+      color: #333;
+      font-weight: bold;
       text-decoration: none;
       border-radius: 5px;
       transition: background-color 0.3s;
     }
     .cta-buttons a:hover {
-      background-color: #023e8a;
+      background-color: #f9844a; /* naranja */
+      color: white;
     }
     table {
       width: 100%;
@@ -164,6 +166,20 @@
       margin-top: 10px;
       font-size: 1.1em;
       color: #333;
+    }
+    .faq {
+      margin-top: 40px;
+    }
+    .faq h3 {
+      color: #0077b6;
+      margin-top: 20px;
+    }
+    .about {
+      background-color: #eaf6fb;
+      padding: 30px;
+      border-radius: 10px;
+      margin-top: 40px;
+      text-align: center;
     }
     .chatbot-window {
       position: fixed;
@@ -346,7 +362,7 @@
     </div>
   </section>
 
-  <!-- CASO DE ÉXITO SIN FOTO -->
+  <!-- CASO DE ÉXITO -->
   <section class="caso-exito">
     <h2>Caso de Éxito</h2>
     <p>Uno de nuestros clientes, la clínica dental <strong>Sonrisas Plus</strong>, redujo un 40% las ausencias y aumentó un 25% sus reservas en solo 3 meses gracias a nuestro chatbot avanzado.</p>
@@ -354,6 +370,23 @@
       “Antes perdíamos mucho tiempo contestando las mismas preguntas y gestionando cancelaciones. Desde que Conversia nos implementó el chatbot, todo es más ágil. Los pacientes reciben recordatorios automáticos y reservan por WhatsApp en segundos. Nos ha cambiado la gestión por completo.”
     </blockquote>
     <p class="author">— Dra. Laura Méndez, Clínica Sonrisas Plus</p>
+  </section>
+
+  <!-- SOBRE NOSOTROS -->
+  <section class="about">
+    <h2>👤 Sobre Conversia Agency</h2>
+    <p>En Conversia Agency creemos que la automatización no es solo tecnología: es la forma de que tu negocio <strong>trabaje mejor sin gastar más</strong>. Nuestro objetivo es ayudarte a captar más clientes, ahorrar tiempo y mantener la mejor atención al cliente 24/7.</p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>❓ Preguntas Frecuentes</h2>
+    <h3>¿Qué pasa si no funciona el chatbot?</h3>
+    <p>Incluimos soporte y mantenimiento en todos nuestros planes.</p>
+    <h3>¿Tengo que pagar todo de golpe?</h3>
+    <p>No, puedes financiar el servicio en 4, 6, 8, 16 o 24 meses.</p>
+    <h3>¿Se adapta a cualquier clínica?</h3>
+    <p>Sí, personalizamos los flujos de conversación para tu negocio.</p>
   </section>
 
   <!-- CTA -->
@@ -377,21 +410,4 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style="width:25px;height:25px;margin-right:5px;"> conversia.agency
       </a>
       <a href="https://www.tiktok.com/@conversia.agency" target="_blank" style="text-decoration:none; color:white; display:inline-flex; align-items:center;">
-        <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok" style="width:25px;height:25px;margin-right:5px;"> conversia.agency
-      </a>
-    </div>
-  </footer>
-
-  <!-- CHATBOT -->
-  <iframe id="chatbot-widget-window-iframe" src="https://app.gptchatbot.it/widget/555e83afa42747d3b2e4f603908d2d00" class="chatbot-window" allow="clipboard-read; clipboard-write"></iframe>
-  <div id="chatbot-widget-bubble" class="chatbot-bubble">💬</div>
-
-  <script>
-    const chatbotBubble = document.getElementById("chatbot-widget-bubble");
-    const chatbotWindow = document.getElementById("chatbot-widget-window-iframe");
-    chatbotBubble.addEventListener("click", () => {
-      chatbotWindow.style.display = chatbotWindow.style.display === "block" ? "none" : "block";
-    });
-  </script>
-</body>
-</html>
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok" style="width:25px;height:
