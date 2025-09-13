@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conversia Agency - Chatbots Inteligentes</title>
+  <title>Conversia Agency - Chatbots que llenan tu agenda</title>
+  <meta name="description" content="Conversia Agency: Chatbots inteligentes para clínicas y empresas. Automatiza tu atención, responde al instante y llena tu agenda sin gastar más.">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -25,14 +26,22 @@
       top: 0;
       z-index: 200;
     }
+    /* HEADER */
     header {
       background: linear-gradient(135deg, #0077b6, #00b894);
+      background-size: 200% 200%;
+      animation: gradientMove 8s ease infinite;
       color: white;
       padding: 50px 20px;
       display: flex;
       align-items: center;
       justify-content: space-around;
       flex-wrap: wrap;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
     header h1 {
       margin: 0;
@@ -76,6 +85,10 @@
     .card img {
       width: 60px;
       margin-bottom: 15px;
+      transition: transform 0.5s ease;
+    }
+    .card img:hover {
+      transform: rotate(10deg) scale(1.1);
     }
     .cta-buttons {
       text-align: center;
@@ -84,17 +97,18 @@
     .cta-buttons a {
       display: inline-block;
       margin: 10px;
-      padding: 14px 28px;
+      padding: 16px 32px;
       background-color: #f9c74f; /* amarillo */
       color: #333;
       font-weight: bold;
       text-decoration: none;
       border-radius: 5px;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, transform 0.2s;
     }
     .cta-buttons a:hover {
       background-color: #f9844a; /* naranja */
       color: white;
+      transform: scale(1.05);
     }
     table {
       width: 100%;
@@ -107,7 +121,6 @@
     th, td {
       padding: 15px;
       text-align: center;
-      transition: transform 0.3s ease;
     }
     th {
       background-color: #0077b6;
@@ -117,30 +130,41 @@
       color: #28a745;
       font-weight: bold;
       font-size: 1.7em;
-      transition: transform 0.3s ease;
     }
     .cross {
       color: red;
       font-weight: bold;
       font-size: 1.7em;
-      transition: transform 0.3s ease;
     }
-    .floating-whatsapp {
+    .floating-whatsapp, .floating-cta {
       position: fixed;
-      width: 60px;
-      height: 60px;
       bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: #FFF;
       border-radius: 50px;
       text-align: center;
-      font-size: 30px;
+      font-size: 26px;
       box-shadow: 2px 2px 3px #999;
       z-index: 100;
       display: flex;
       align-items: center;
       justify-content: center;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .floating-whatsapp {
+      width: 60px; height: 60px;
+      right: 20px;
+      background-color: #25D366;
+    }
+    .floating-cta {
+      right: 90px;
+      background-color: #f9844a;
+      font-size: 14px;
+      padding: 10px 16px;
+      border-radius: 8px;
+    }
+    .floating-whatsapp:hover, .floating-cta:hover {
+      transform: scale(1.1);
     }
     footer {
       background-color: #0077b6;
@@ -241,7 +265,7 @@
   <header>
     <div style="max-width:500px;">
       <h1>⏰ Tus clientes no esperan… ¿quieres seguir perdiendo ventas?</h1>
-      <p>En <strong>Conversia Agency</strong> automatizamos tu atención al cliente con chatbots inteligentes para que no pierdas ni una oportunidad.</p>
+      <p>En <strong>Conversia Agency</strong> automatizamos tu atención con chatbots que <strong>llenan tu agenda y ahorran tiempo</strong> desde el primer día.</p>
       <div class="cta-buttons">
         <a href="https://calendly.com/ivialonsolopez/new-meeting" target="_blank"> Agenda tu llamada gratis 📞 </a>
       </div>
@@ -258,17 +282,17 @@
       <div class="card">
         <img src="https://cdn-icons-png.flaticon.com/512/2920/2920244.png" alt="24 horas">
         <h3>✔️ Disponibilidad 24/7</h3>
-        <p>Responde al instante en WhatsApp, web o redes sociales.</p>
+        <p>Nunca más pierdas clientes por no contestar: tu negocio responde siempre.</p>
       </div>
       <div class="card">
         <img src="https://cdn-icons-png.flaticon.com/512/679/679720.png" alt="Ahorro dinero">
         <h3>✔️ Ahorro de costes</h3>
-        <p>Reduce carga de trabajo y evita contratar más personal.</p>
+        <p>Automatiza tareas repetitivas y libera horas de tu equipo cada semana.</p>
       </div>
       <div class="card">
         <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="Calendario">
         <h3>✔️ Más citas confirmadas</h3>
-        <p>Tu agenda siempre llena, sin llamadas perdidas.</p>
+        <p>Llena tu agenda con recordatorios y reservas automáticas.</p>
       </div>
     </div>
   </section>
@@ -279,33 +303,33 @@
     <div class="grid">
       <div class="card">
         <img src="https://cdn-icons-png.flaticon.com/512/3771/3771426.png" alt="Calendario automático">
-        <h3>Agendamiento automático</h3>
-        <p>Permite que tus clientes reserven citas 24/7 sin intervención manual.</p>
+        <h3>Nunca pierdas una cita</h3>
+        <p>Tus clientes reservan 24/7 sin intervención manual.</p>
       </div>
       <div class="card">
         <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Chat instantáneo">
-        <h3>Respuestas instantáneas</h3>
-        <p>Chatbots que responden al momento a preguntas frecuentes y consultas rápidas.</p>
+        <h3>Responde al instante</h3>
+        <p>Evita que se vayan a la competencia: tu chatbot responde al momento.</p>
       </div>
       <div class="card">
         <img src="https://cdn-icons-png.flaticon.com/512/1827/1827340.png" alt="Recordatorios">
-        <h3>Recordatorios automáticos</h3>
-        <p>Evita ausencias enviando avisos personalizados de cada cita.</p>
+        <h3>Adiós a los olvidos</h3>
+        <p>Recordatorios automáticos que reducen ausencias y cancelaciones.</p>
       </div>
       <div class="card">
         <img src="https://cdn-icons-png.flaticon.com/512/3135/3135683.png" alt="Clientes">
-        <h3>Captación de leads</h3>
-        <p>Convierte visitantes en clientes con flujos diseñados para cerrar ventas.</p>
+        <h3>Convierte más visitas</h3>
+        <p>Convierte contactos en clientes reales con flujos optimizados.</p>
       </div>
       <div class="card">
         <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Analítica">
-        <h3>Analítica avanzada</h3>
-        <p>Descubre qué funciona y qué no con informes detallados de interacción.</p>
+        <h3>Decide con datos</h3>
+        <p>Informes claros sobre cómo interactúan tus clientes con el chatbot.</p>
       </div>
       <div class="card">
         <img src="https://cdn-icons-png.flaticon.com/512/942/942751.png" alt="CRM">
-        <h3>Integración CRM</h3>
-        <p>Sincroniza tu chatbot con tu sistema de gestión para trabajar mejor y más rápido.</p>
+        <h3>Integra tu negocio</h3>
+        <p>Sincroniza con tu CRM y gestiona todo desde un solo lugar.</p>
       </div>
     </div>
   </section>
@@ -316,49 +340,49 @@
     <table>
       <tr>
         <th>Características</th>
-        <th class="plan-col" data-plan="basico">Plan Básico - 100€</th>
-        <th class="plan-col" data-plan="avanzado">Plan Avanzado - 600€</th>
+        <th>Plan Básico - 100€</th>
+        <th>Plan Avanzado - 600€</th>
       </tr>
       <tr>
         <td>Atención 24/7 con respuestas rápidas</td>
-        <td class="basico"><span class="check">✅</span></td>
-        <td class="avanzado"><span class="check">✅</span></td>
+        <td><span class="check">✅</span></td>
+        <td><span class="check">✅</span></td>
       </tr>
       <tr>
         <td>Preguntas frecuentes automatizadas</td>
-        <td class="basico"><span class="check">✅</span></td>
-        <td class="avanzado"><span class="check">✅</span></td>
+        <td><span class="check">✅</span></td>
+        <td><span class="check">✅</span></td>
       </tr>
       <tr>
         <td>Reserva de citas simple</td>
-        <td class="basico"><span class="check">✅</span></td>
-        <td class="avanzado"><span class="check">✅</span></td>
+        <td><span class="check">✅</span></td>
+        <td><span class="check">✅</span></td>
       </tr>
       <tr>
-        <td>Recordatorios automáticos (evita ausencias u olvidos)</td>
-        <td class="basico"><span class="cross">✘</span></td>
-        <td class="avanzado"><span class="check">✅</span></td>
+        <td>Recordatorios automáticos</td>
+        <td><span class="cross">✘</span></td>
+        <td><span class="check">✅</span></td>
       </tr>
       <tr>
-        <td>Soporte en múltiples canales (WhatsApp, Messenger, Web)</td>
-        <td class="basico"><span class="cross">✘</span></td>
-        <td class="avanzado"><span class="check">✅</span></td>
+        <td>Soporte en múltiples canales</td>
+        <td><span class="cross">✘</span></td>
+        <td><span class="check">✅</span></td>
       </tr>
       <tr>
-        <td>Integración con herramientas de gestión de clientes</td>
-        <td class="basico"><span class="cross">✘</span></td>
-        <td class="avanzado"><span class="check">✅</span></td>
+        <td>Integración con herramientas CRM</td>
+        <td><span class="cross">✘</span></td>
+        <td><span class="check">✅</span></td>
       </tr>
       <tr>
-        <td>Mayor personalización en flujos de conversación</td>
-        <td class="basico"><span class="cross">✘</span></td>
-        <td class="avanzado"><span class="check">✅</span></td>
+        <td>Personalización avanzada</td>
+        <td><span class="cross">✘</span></td>
+        <td><span class="check">✅</span></td>
       </tr>
     </table>
 
     <div class="financiacion">
       <h3>💸 Tu servicio completo sin coste inicial</h3>
-      <p>Accede a todas las actualizaciones, revisiones y mantenimiento incluidos, eligiendo pagar en cómodos plazos de 4, 6, 8, 16 o 24 meses.</p>
+      <p>Accede a todas las actualizaciones y mantenimiento incluidos, pagando en plazos de 4, 6, 8, 16 o 24 meses.</p>
     </div>
   </section>
 
@@ -386,7 +410,11 @@
     <h3>¿Tengo que pagar todo de golpe?</h3>
     <p>No, puedes financiar el servicio en 4, 6, 8, 16 o 24 meses.</p>
     <h3>¿Se adapta a cualquier clínica?</h3>
-    <p>Sí, personalizamos los flujos de conversación para tu negocio.</p>
+    <p>Sí, personalizamos los flujos de conversación según tu negocio.</p>
+    <h3>¿Necesito conocimientos técnicos?</h3>
+    <p>No, nosotros nos encargamos de todo: instalación, ajustes y soporte.</p>
+    <h3>¿Puedo probarlo antes?</h3>
+    <p>Podemos mostrarte un ejemplo real para que veas cómo funcionaría en tu clínica.</p>
   </section>
 
   <!-- CTA -->
@@ -396,18 +424,6 @@
     <a href="mailto:automatizatuempresa@conversiaagency.es" target="_blank"> Contáctanos 📩 </a>
   </section>
 
-  <!-- WHATSAPP -->
+  <!-- WHATSAPP Y CTA FLOTANTE -->
   <a href="https://api.whatsapp.com/send?phone=685508883&text=%20" class="floating-whatsapp" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:35px;height:35px;">
-  </a>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Conversia Agency - Todos los derechos reservados</p>
-    <p>📧 automatizatuempresa@conversiaagency.es</p>
-    <div style="margin-top:10px;">
-      <a href="https://www.instagram.com/conversia.agency/" target="_blank" style="margin-right:20px; text-decoration:none; color:white; display:inline-flex; align-items:center;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" style="width:25px;height:25px;margin-right:5px;"> conversia.agency
-      </a>
-      <a href="https://www.tiktok.com/@conversia.agency" target="_blank" style="text-decoration:none; color:white; display:inline-flex; align-items:center;">
-        <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok" style="width:25px;height:
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:35px;height:35px
