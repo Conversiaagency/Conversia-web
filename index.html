@@ -163,9 +163,19 @@
       margin-top: 40px;
     }
 
-    .faq h3 {
-      color: #0077b6;
-      margin-top: 20px;
+    .faq-box {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 15px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .faq-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
     }
 
     .about {
@@ -431,16 +441,31 @@
   <!-- FAQ -->
   <section class="faq">
     <h2>❓ Preguntas Frecuentes</h2>
-    <h3>¿Qué pasa si no funciona el chatbot?</h3>
-    <p>Incluimos soporte y mantenimiento en todos nuestros planes.</p>
-    <h3>¿Tengo que pagar todo de golpe?</h3>
-    <p>No, puedes financiar el servicio en 4, 6, 8, 16 o 24 meses.</p>
-    <h3>¿Se adapta a cualquier clínica?</h3>
-    <p>Sí, personalizamos los flujos de conversación según tu negocio.</p>
-    <h3>¿Necesito conocimientos técnicos?</h3>
-    <p>No, nosotros nos encargamos de todo: instalación, ajustes y soporte.</p>
-    <h3>¿Puedo probarlo antes?</h3>
-    <p>Podemos mostrarte un ejemplo real para que veas cómo funcionaría en tu clínica.</p>
+
+    <div class="faq-box">
+      <h3>¿Qué pasa si no funciona el chatbot?</h3>
+      <p>Incluimos soporte y mantenimiento en todos nuestros planes.</p>
+    </div>
+
+    <div class="faq-box">
+      <h3>¿Tengo que pagar todo de golpe?</h3>
+      <p>No, puedes financiar el servicio en 4, 6, 8, 16 o 24 meses.</p>
+    </div>
+
+    <div class="faq-box">
+      <h3>¿Se adapta a cualquier clínica?</h3>
+      <p>Sí, personalizamos los flujos de conversación según tu negocio.</p>
+    </div>
+
+    <div class="faq-box">
+      <h3>¿Necesito conocimientos técnicos?</h3>
+      <p>No, nosotros nos encargamos de todo: instalación, ajustes y soporte.</p>
+    </div>
+
+    <div class="faq-box">
+      <h3>¿Puedo probarlo antes?</h3>
+      <p>Podemos mostrarte un ejemplo real para que veas cómo funcionaría en tu clínica.</p>
+    </div>
   </section>
 
   <!-- CTA -->
