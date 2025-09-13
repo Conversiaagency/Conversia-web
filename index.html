@@ -15,8 +15,11 @@
     header {
       background-color: #0077b6;
       color: white;
-      text-align: center;
       padding: 50px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
     }
     header h1 {
       margin: 0;
@@ -26,13 +29,18 @@
       font-size: 1.2em;
       margin-top: 10px;
     }
+    header img {
+      max-width: 300px;
+      margin-top: 20px;
+    }
     section {
       padding: 40px 20px;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
     }
     h2 {
       color: #0077b6;
+      text-align: center;
     }
     .grid {
       display: grid;
@@ -51,6 +59,10 @@
     .card:hover {
       transform: translateY(-5px) scale(1.03);
       box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    .card img {
+      width: 60px;
+      margin-bottom: 15px;
     }
     .cta-buttons {
       text-align: center;
@@ -188,14 +200,25 @@
     .financiacion p {
       font-size: 1.1em;
     }
+    .caso-exito img {
+      max-width: 400px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 10px;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>⏰ Tus clientes no esperan… ¿quieres seguir perdiendo ventas?</h1>
-    <p>En <strong>Conversia Agency</strong> automatizamos tu atención al cliente con chatbots inteligentes para que no pierdas ni una oportunidad.</p>
-    <div class="cta-buttons">
-      <a href="https://calendly.com/ivialonsolopez/new-meeting" target="_blank"> Agenda tu llamada gratis 📞 </a>
+    <div style="max-width:500px;">
+      <h1>⏰ Tus clientes no esperan… ¿quieres seguir perdiendo ventas?</h1>
+      <p>En <strong>Conversia Agency</strong> automatizamos tu atención al cliente con chatbots inteligentes para que no pierdas ni una oportunidad.</p>
+      <div class="cta-buttons">
+        <a href="https://calendly.com/ivialonsolopez/new-meeting" target="_blank"> Agenda tu llamada gratis 📞 </a>
+      </div>
+    </div>
+    <div>
+      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Chatbot ilustración">
     </div>
   </header>
 
@@ -203,14 +226,17 @@
     <h2>🚀 Beneficios para tu negocio</h2>
     <div class="grid">
       <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920244.png" alt="24 horas">
         <h3>✔️ Disponibilidad 24/7</h3>
         <p>Responde al instante en WhatsApp, web o redes sociales.</p>
       </div>
       <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/679/679720.png" alt="Ahorro dinero">
         <h3>✔️ Ahorro de costes</h3>
         <p>Reduce carga de trabajo y evita contratar más personal.</p>
       </div>
       <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="Calendario">
         <h3>✔️ Más citas confirmadas</h3>
         <p>Tu agenda siempre llena, sin llamadas perdidas.</p>
       </div>
@@ -221,26 +247,32 @@
     <h2>¿Cómo podemos ayudarte?</h2>
     <div class="grid">
       <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3771/3771426.png" alt="Calendario automático">
         <h3>Agendamiento automático</h3>
         <p>Permite que tus clientes reserven citas 24/7 sin intervención manual.</p>
       </div>
       <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Chat instantáneo">
         <h3>Respuestas instantáneas</h3>
         <p>Chatbots que responden al momento a preguntas frecuentes y consultas rápidas.</p>
       </div>
       <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1827/1827340.png" alt="Recordatorios">
         <h3>Recordatorios automáticos</h3>
         <p>Evita ausencias enviando avisos personalizados de cada cita.</p>
       </div>
       <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135683.png" alt="Clientes">
         <h3>Captación de leads</h3>
         <p>Convierte visitantes en clientes con flujos diseñados para cerrar ventas.</p>
       </div>
       <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Analítica">
         <h3>Analítica avanzada</h3>
         <p>Descubre qué funciona y qué no con informes detallados de interacción.</p>
       </div>
       <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/942/942751.png" alt="CRM">
         <h3>Integración CRM</h3>
         <p>Sincroniza tu chatbot con tu sistema de gestión para trabajar mejor y más rápido.</p>
       </div>
@@ -296,27 +328,11 @@
       <h3>💸 Tu servicio completo sin coste inicial</h3>
       <p>Accede a todas las actualizaciones, revisiones y mantenimiento incluidos, eligiendo pagar en cómodos plazos de 4, 6, 8, 16 o 24 meses.</p>
     </div>
-
-    <script>
-      const basicoCells = document.querySelectorAll('.basico, th[data-plan="basico"]');
-      const avanzadoCells = document.querySelectorAll('.avanzado, th[data-plan="avanzado"]');
-      function addHoverEffect(cells) {
-        cells.forEach(cell => {
-          cell.addEventListener('mouseenter', () => {
-            cells.forEach(c => c.style.transform = 'scale(1.25)');
-          });
-          cell.addEventListener('mouseleave', () => {
-            cells.forEach(c => c.style.transform = 'scale(1)');
-          });
-        });
-      }
-      addHoverEffect(basicoCells);
-      addHoverEffect(avanzadoCells);
-    </script>
   </section>
 
-  <section>
+  <section class="caso-exito">
     <h2>Caso de Éxito</h2>
+    <img src="https://cdn-icons-png.flaticon.com/512/3079/3079286.png" alt="Clínica Dental">
     <p>Uno de nuestros clientes, la clínica dental <strong>Sonrisas Plus</strong>, redujo un 40% las ausencias y aumentó un 25% sus reservas en solo 3 meses gracias a nuestro chatbot avanzado.</p>
     <blockquote>
       “Antes perdíamos mucho tiempo contestando las mismas preguntas y gestionando cancelaciones. Desde que Conversia nos implementó el chatbot, todo es más ágil. Los pacientes reciben recordatorios automáticos y reservan por WhatsApp en segundos. Nos ha cambiado la gestión por completo.”
@@ -326,7 +342,7 @@
 
   <section class="cta-buttons">
     <a href="https://calendly.com/ivialonsolopez/new-meeting" target="_blank"> Agendar una llamada 📞 </a>
-    <p class="call-text"> Agenda una llamada rápida y vemos juntos qué plan se adapta mejor a tu clínica o empresa. </p>
+    <p class="call-text"> ¿Qué te parece si agendamos una llamada rápida para verlo juntos y decidir cuál plan se adapta mejor a vuestro negocio? </p>
     <a href="mailto:automatizatuempresa@conversiaagency.es" target="_blank"> Contáctanos 📩 </a>
   </section>
 
