@@ -460,3 +460,28 @@
       </a>
       <a href="https://www.tiktok.com/@conversia.agency" target="_blank" style="text-decoration:none; color:white; display:inline-flex; align-items:center;">
         <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok" style="width:25px;height:25
+                <a href="https://www.tiktok.com/@conversia.agency" target="_blank" style="text-decoration:none; color:white; display:inline-flex; align-items:center;">
+        <img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg" alt="TikTok" style="width:25px;height:25px;margin-right:5px;"> conversia.agency
+      </a>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOTANTE -->
+  <a href="https://api.whatsapp.com/send?phone=685508883&text=%20" class="floating-whatsapp" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:35px;height:35px;">
+  </a>
+
+  <!-- CHATBOT FLOTANTE -->
+  <iframe id="chatbot-widget-window-iframe" src="https://app.gptchatbot.it/widget/555e83afa42747d3b2e4f603908d2d00" class="chatbot-window" allow="clipboard-read; clipboard-write"></iframe>
+  <div id="chatbot-widget-bubble" class="chatbot-bubble">💬</div>
+
+  <script>
+    const chatbotBubble = document.getElementById("chatbot-widget-bubble");
+    const chatbotWindow = document.getElementById("chatbot-widget-window-iframe");
+
+    chatbotBubble.addEventListener("click", () => {
+      chatbotWindow.style.display = chatbotWindow.style.display === "block" ? "none" : "block";
+    });
+  </script>
+</body>
+</html>
